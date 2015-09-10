@@ -10,4 +10,38 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+eval "$(rbenv init -)"
+
+# Functions
+# (f)ind by (n)ame
+# usage: fn foo
+# to find all files containing 'foo' in the name
+function fn() { ls **/*$1* }
+
+# Aliases
+
+# Moving around
+alias cdb='cd -'
+alias cls='clear;ls'
+alias cl='clear'
+
+# Reload
+alias zr='source ${HOME}/.zshrc && source ${HOME}/.zprofile'
+
+# Edit alias
+alias ae='vim ${HOME}/.zshrc'
+alias ge='vim ${HOME}/.gitconfig'
+
+alias ne='PATH=$(npm bin):$PATH'
+alias hk='heroku'
+# Homebrew
+alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
+
+#bindkey
+# emacs style
+bindkey '^a' beginning-of-line
+bindkey '^e' end-of-line
+
+# Finder
+alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'

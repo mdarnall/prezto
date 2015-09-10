@@ -78,6 +78,7 @@ alias gdi='git status --porcelain --short --ignored | sed -n "s/^!! //p"'
 alias gf='git fetch'
 alias gfc='git clone'
 alias gfm='git pull'
+alias gpl='git pull'
 alias gfr='git pull --rebase'
 
 # Grep (g)
@@ -143,7 +144,7 @@ alias gRs='git remote show'
 alias gRb='git-hub-browse'
 
 # Stash (s)
-alias gs='git stash'
+alias gst='git stash'
 alias gsa='git stash apply'
 alias gsx='git stash drop'
 alias gsX='git-stash-clear-interactive'
@@ -162,6 +163,10 @@ alias gSa='git submodule add'
 alias gSf='git submodule foreach'
 alias gSi='git submodule init'
 alias gSI='git submodule update --init --recursive'
+
+alias gsrsh='git submodule foreach git reset --hard'
+alias gsur='git submodule update --recursive'
+
 alias gSl='git submodule status'
 alias gSm='git-submodule-move'
 alias gSs='git submodule sync'
@@ -169,6 +174,7 @@ alias gSu='git submodule foreach git pull origin master'
 alias gSx='git-submodule-remove'
 
 # Working Copy (w)
+alias gs='git status'
 alias gws='git status --ignore-submodules=${_git_status_ignore_submodules} --short'
 alias gwS='git status --ignore-submodules=${_git_status_ignore_submodules}'
 alias gwd='git diff --no-ext-diff'
