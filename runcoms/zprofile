@@ -43,7 +43,7 @@ typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $(brew --prefix coreutils)/libexec/gnubin
+  ~/.rbenv/shims
   /usr/local/{bin,sbin}
   $path
 )
@@ -73,3 +73,7 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8

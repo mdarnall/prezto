@@ -10,7 +10,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-eval "$(rbenv init -)"
 
 # Functions
 # (f)ind by (n)ame
@@ -34,6 +33,8 @@ alias ge='vim ${HOME}/.gitconfig'
 
 alias ne='PATH=$(npm bin):$PATH'
 alias hk='heroku'
+alias rmdd='rm -rf DerivedData/'
+
 # Homebrew
 alias brewu='brew update  && brew upgrade --all && brew cleanup && brew prune && brew doctor'
 

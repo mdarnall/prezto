@@ -40,6 +40,7 @@ alias gbm='git branch -m'
 alias gbM='git branch -M'
 alias gbs='git show-branch'
 alias gbS='git show-branch -a'
+alias gbpurge='git branch --merged | grep -Ev "(\*|master|dev)" | xargs -n 1 git branch -d'
 
 # Commit (c)
 alias gc='git commit --verbose'
