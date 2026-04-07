@@ -47,6 +47,7 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gbV='git branch --verbose --verbose'
   alias gbx='git branch --delete'
   alias gbX='git branch --delete --force'
+  alias gbPurge='git branch --merged | grep -v "\*" | xargs git branch -D'
 
   # Commit (c)
   alias gc='git commit --verbose'
@@ -96,6 +97,8 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gfc='git clone'
   alias gfcr='git clone --recurse-submodules'
   alias gfm='git pull'
+  alias gpl='git pull --rebase'
+  alias gfa='git fetch --all'
   alias gfma='git pull --autostash'
   alias gfr='git pull --rebase'
   alias gfra='git pull --rebase --autostash'
@@ -254,6 +257,9 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gSs='git submodule sync'
   alias gSu='git submodule update --remote --recursive'
   alias gSx='git-submodule-remove'
+  alias gsur='git submodule update --recursive'
+  alias gsrsh='git submodule foreach git reset --hard'
+
 
   # Tag (t)
   alias gt='git tag'
@@ -272,4 +278,5 @@ if ! zstyle -t ':prezto:module:git:alias' skip; then
   alias gwC='git clean --force'
   alias gwx='git rm -r'
   alias gwX='git rm -r --force'
+  alias gs='git status'
 fi
