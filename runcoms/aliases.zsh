@@ -34,7 +34,6 @@ alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall F
 
 # Tools
 alias c='claude'
-alias gwc='/opt/homebrew/bin/gws'  # Google Workspace CLI (gws alias is taken by zprezto's git status)
 
 # Serve a directory with portless + python http.server
 # usage: serve                    — serves current dir as https://<dirname>.localhost
