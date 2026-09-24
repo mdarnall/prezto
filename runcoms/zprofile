@@ -75,8 +75,15 @@ if [[ -z "$LESSOPEN" ]] && (( $#commands[(i)lesspipe(|.sh)] )); then
 fi
 
 # Added by `rbenv init` on Thu Mar  6 19:32:31 MST 2025
-eval "$(rbenv init - --no-rehash zsh)"
+if (( $+commands[rbenv] )); then
+  eval "$(rbenv init - --no-rehash zsh)"
+fi
 
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+# Machine-specific settings (untracked).
+if [[ -s "${ZDOTDIR:-$HOME}/.zprofile.local" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprofile.local"
+fi
