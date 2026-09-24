@@ -31,3 +31,16 @@ alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 # Finder
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+# Tools
+alias c='claude'
+
+# Serve a directory with portless + python http.server
+# usage: serve                    — serves current dir as https://<dirname>.localhost
+#        serve myapp              — custom name as https://myapp.localhost
+#        serve myapp ./public     — custom name + directory
+serve() {
+  local name="${1:-$(basename "$PWD")}"
+  local dir="${2:-.}"
+  npx portless "$name" -- bash -c "cd $dir && python3 -m http.server \$PORT -b \$HOST"
+}

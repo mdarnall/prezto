@@ -79,10 +79,6 @@ if (( $+commands[rbenv] )); then
   eval "$(rbenv init - --no-rehash zsh)"
 fi
 
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-
 # Machine-specific settings (untracked).
 if [[ -s "${ZDOTDIR:-$HOME}/.zprofile.local" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprofile.local"
