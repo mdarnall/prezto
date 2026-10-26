@@ -24,6 +24,9 @@ alias ge='vim ${HOME}/.gitconfig'
 
 alias rmdd='rm -rf DerivedData/'
 
+# Git
+alias gmf='git merge --ff-only'
+
 # Homebrew
 alias brewu='brew update && brew upgrade && brew cleanup && brew doctor'
 
